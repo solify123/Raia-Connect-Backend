@@ -12,10 +12,6 @@ export interface CheckoutResult {
   message?: string;
 }
 
-/**
- * Checkout use case: validates stock and decrements atomically.
- * Server-side validation ensures stock is available before processing.
- */
 export class CheckoutService {
   constructor(private readonly productRepository: IProductRepository) {}
 

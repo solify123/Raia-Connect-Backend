@@ -2,7 +2,6 @@ import { Router } from 'express';
 import { ProductController } from '../controllers/ProductController';
 import { CheckoutController } from '../controllers/CheckoutController';
 
-/** Only the two required endpoints for the project. */
 export function createRoutes(
   productController: ProductController,
   checkoutController: CheckoutController

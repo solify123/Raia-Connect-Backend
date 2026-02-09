@@ -24,10 +24,6 @@ export class ProductRepository implements IProductRepository {
     return doc ? this.toProduct(doc as IProductDocumentPopulated) : null;
   }
 
-  /**
-   * Decrements stock only if current stock >= quantity. Uses findOneAndUpdate
-   * for atomic update (ACID-like behavior). Returns product with category name via populate.
-   */
   async decrementStock(id: string, quantity: number = 1): Promise<Product | null> {
     const updated = await ProductModel.findOneAndUpdate(
       { _id: id, stock: { $gte: quantity } },

@@ -1,7 +1,3 @@
-/**
- * Seed script: populates MongoDB with Categories and Products.
- * Run: npm run seed
- */
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import { CategoryModel } from '../infrastructure/database/schemas/CategorySchema';

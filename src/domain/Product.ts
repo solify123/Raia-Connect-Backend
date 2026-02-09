@@ -1,6 +1,3 @@
-/**
- * Domain entity: Product
- */
 export interface Product {
   _id: string;
   name: string;

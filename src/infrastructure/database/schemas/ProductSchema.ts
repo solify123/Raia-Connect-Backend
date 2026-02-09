@@ -1,11 +1,7 @@
 import mongoose, { Schema, Document, Model, Types } from 'mongoose';
-// Ensure Category model is registered before Product (for ref: 'Category')
+
 import './CategorySchema';
 
-/**
- * Product document in DB: has categoryId (ref to Category), not category name.
- * API still returns Product with category (name string) via populate.
- */
 export interface IProductDocument extends Document {
   _id: mongoose.Types.ObjectId;
   name: string;
